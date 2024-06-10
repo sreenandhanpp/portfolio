@@ -1,0 +1,45 @@
+.tech_stacks_container{
+    background-color: var(--secondary-color);
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tech_stacks_head{
+    color: var(--text-color-white);
+    font-family: var(--ff);
+    font-size: 14px;
+    font-weight: 500;
+    margin-left: 110px;
+    margin-bottom: 18px;
+}
+
+.tech_stacks_icon_wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* responsive design */
+
+@media only screen and (max-width: 600px) {
+    .tech_stacks_container{
+        height: 60vh;
+    }
+
+    .tech_stacks_icon_wrapper{
+        display: flex;
+        justify-content: start;
+        align-items: center;
+    }
+
+    .tech_stacks_icon_inner_wrapper{
+        padding: 14px;
+    }
+
+    .tech_stacks_head{
+        margin-left: 0px;
+        margin-bottom: 14px;
+    }
+}

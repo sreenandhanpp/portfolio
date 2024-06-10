@@ -1,0 +1,41 @@
+.contact_container{
+    background-color: var(--primary-color);
+    height: 100vh;  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact_container h3{
+    color: var(--text-color-secondary);
+    font-family: var(--ff);
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 18px;
+}
+
+.contact_container p{
+    font-family: var(--ff);
+    color: var(--text-color-secondary);
+    font-size: 14px;
+    margin-top: 18px;
+    font-weight: 400;
+}
+
+.location ,.email{
+    font-family: var(--ff);
+    color:var(--text-color-secondary);
+    font-size: 14px;
+    margin-top: 18px;
+    font-weight: 700;
+}
+
+@media screen and (max-width: 600px){
+    .contact_container{
+        height: 80vh;  
+    }
+
+    .contact_details span{
+        display: inline-block;
+    }
+}

@@ -1,0 +1,52 @@
+.about_container {
+  background-color: var(--primary-color);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about_container p {
+  font-family: var(--ff);
+  color: var(--text-color-secondary);
+  font-size: 14px;
+  margin-bottom: 14px;
+  font-weight: 400;
+}
+
+.about_container img {
+  filter: grayscale(100%);
+  /* transition: filter 0.5s ease-in-out; */
+}
+/*   
+  .about_container img:hover {
+    filter: grayscale(0%);
+  }
+   */
+
+.about_me_header {
+  color: var(--text-color-secondary);
+  font-family: var(--ff);
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 14px;
+}
+
+.domain_header {
+  color: var(--text-color-secondary);
+  font-family: var(--ff);
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 14px;
+}
+
+/* responsive design */
+@media only screen and (max-width: 600px) {
+  .about_container {
+    height: 110vh;
+  }
+
+  .about_me_header {
+    margin-top: 24px;
+  }
+}

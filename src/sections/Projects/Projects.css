@@ -1,0 +1,22 @@
+.projects_container{
+    background-color: #ffff;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.projects_header{
+    color: var(--text-color-secondary);
+    font-family: var(--ff);
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 0px;
+}
+
+@media only screen and (max-width: 600px) {
+    .projects_container{
+        height: auto;
+        padding: 64px 0px 64px 0px;
+    }
+}

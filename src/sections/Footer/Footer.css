@@ -1,0 +1,25 @@
+.footer_container{
+    background-color: #ffff;
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer_container span{
+    color: var(--text-color-secondary);
+    font-family: var(--ff);
+    font-size: 14px;
+    font-weight: 400;
+}
+
+@media only screen and (max-width: 600px){
+    .footer_icon{
+        display: none;
+    }
+
+    .footer_container span:first-child{
+        display: flex;
+        justify-content: center;
+    }
+}
