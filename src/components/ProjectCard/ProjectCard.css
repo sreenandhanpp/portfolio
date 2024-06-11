@@ -1,43 +1,54 @@
 .project-card {
-    display: flex;
-    background-color: white;
-    border: 1px solid #ddd;
-    overflow: hidden;
     margin: 13px 0;
-    height: 223px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+
+  .img-container{
+   border: 1px solid #fff;
   }
   
+ 
   .project-image img {
-    width: 223px;
-    height: 223px;
+   
+    width: 449px;
+    height: 323px;
     object-fit: cover;
     filter: grayscale(100%);
   }
+
+  @keyframes rotate {
+    to {
+      --angle: 360deg;
+    }
+  }
+  
+  @property --angle {
+    syntax: '<angle>';
+    initial-value: 0deg;
+    inherits: false;
+  }
+  
   
   .project-details {
-    padding: 20px;
+    padding-top: 20px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    background-color: var(--secondary-color);
+    justify-content: start;
   }
   
   .project-details h3 {
     margin: 0 0 10px 0;
-    color: #ffff;
+    color: var(--text-color-white);
     font-family: var(--ff);
-    font-size: 18px;
+    font-size: 14px;
     font-weight: 500;
     margin-bottom: 14px;
-    
   }
   
   .project-details p {
     margin: 0 0 10px 0;
     flex: 1;
     font-family: var(--ff);
-    color: #ffff;
+    color: var(--text-color-white);
     font-size: 14px;
     font-weight: 300;
   }
@@ -51,10 +62,14 @@
     text-decoration: underline;
   }
   
+  .share-icon{
+    width: 38px;
+    height: 38px;
+  }
 
   @media only screen and (max-width: 600px) {
     .project-image img {
-        max-width: 100px; /* Adjust max-width for smaller screens */
+        max-width: 100%; /* Adjust max-width for smaller screens */
     }
   }
   

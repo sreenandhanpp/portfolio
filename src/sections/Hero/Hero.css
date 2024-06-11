@@ -37,6 +37,7 @@
   display: flex;
   justify-content: end;
   align-items: center;
+  z-index: 10;
 }
 
 .right-box {
@@ -44,6 +45,21 @@
   display: flex;
   justify-content: start;
   align-items: center;
+  z-index: 10;
+}
+
+.pyramid_obj{
+  position: absolute;
+  top: 160px;
+  left: -400px;
+  z-index: 1;
+}
+
+.pyramid_obj_2{
+  position: absolute;
+  top: 430px;
+  left: -400px;
+  z-index: 1;
 }
 
 /* responsive design*/
@@ -62,5 +78,13 @@
 
   .hero_wrapper {
     height: 110vh;
+  }
+
+  .pyramid_obj{
+    display: none;
+  }
+  
+  .pyramid_obj_2{
+    display: none;
   }
 }

@@ -6,11 +6,26 @@ const Pyramid = ({ position, args, color }) => {
     const ref = useRef();
   
     useFrame((state, delta, frame) => {
+      ref.current.rotation.x += delta * 0.2;
+    });
+  
+    return (
+      <mesh ref={ref} position={position} scale={[4,4,4]}>
+         <tetrahedronGeometry args={args} />
+         <meshBasicMaterial color={color} wireframe />
+      </mesh>
+    );
+  };
+
+  const PyramidTwo = ({ position, args, color }) => {
+    const ref = useRef();
+  
+    useFrame((state, delta, frame) => {
       ref.current.rotation.y += delta * 0.2;
     });
   
     return (
-      <mesh ref={ref} position={position}>
+      <mesh ref={ref} position={position} scale={[6,6,6]}>
          <tetrahedronGeometry args={args} />
          <meshBasicMaterial color={color} wireframe />
       </mesh>
@@ -20,11 +35,22 @@ const Pyramid = ({ position, args, color }) => {
 const Hero = () => {
   return (
     <section id='home'>
-      {/* <Canvas className="hero-canvas">
+      <div className="pyramid_obj">
+      <Canvas className="hero-canvas">
         <ambientLight />
         <pointLight position={[10, 10, 10]} />
-        <Pyramid position={[-2, 0, -5]} args={[1, 0]} color="blue"  />
-      </Canvas> */}
+        <Pyramid position={[-2, 0, -5]} args={[1, 1]} color="black"  />
+      </Canvas>
+      </div>
+      
+      <div className="pyramid_obj_2">
+      <Canvas className="hero-canvas">
+        <ambientLight />
+        <pointLight position={[10, 10, 10]} />
+        <PyramidTwo position={[-2, 0, -5]} args={[1, 1]} color="black"  />
+      </Canvas>
+      </div>
+      
       <div className="hero_wrapper">
         <div className="container">
         

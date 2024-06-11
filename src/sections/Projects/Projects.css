@@ -1,13 +1,14 @@
 .projects_container{
-    background-color: #ffff;
-    height: 100vh;
+    background-color: #000;
+    height: auto;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 88px 0px 88px 0px;
 }
 
 .projects_header{
-    color: var(--text-color-secondary);
+    color: var(--text-color-white);
     font-family: var(--ff);
     font-size: 18px;
     font-weight: 700;
