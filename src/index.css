@@ -14,5 +14,11 @@
 }
 
 html {
+  scroll-snap-type: y mandatory;
   scroll-behavior: smooth;
+  box-sizing: border-box;
+}
+
+.section{
+  scroll-snap-align: start;
 }

@@ -1,19 +1,56 @@
+@keyframes jumbo {
+  from {
+    background-position: 50% 50%, 50% 50%;
+  }
+  to {
+    background-position: 150% 50%, 150% 50%;
+  }
+}
+
+.hero_wrapper {
+  --stripes: repeating-linear-gradient(
+    100deg,
+    rgba(255, 255, 255, 0.3) 0%, /* Increased opacity */
+    rgba(255, 255, 255, 0.3) 7%,
+    transparent 10%,
+    transparent 12%,
+    rgba(255, 255, 255, 0.3) 16%
+  );
+  --rainbow: repeating-linear-gradient(
+    100deg,
+    rgba(96, 165, 250, 0.4) 10%, /* Increased opacity */
+    rgba(232, 121, 249, 0.4) 15%,
+    rgba(96, 165, 250, 0.4) 20%,
+    rgba(94, 234, 212, 0.4) 25%,
+    rgba(96, 165, 250, 0.4) 30%
+  );
+
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: 
+    rgb(246, 246, 246, 0.1), /* Semi-transparent white */
+    var(--stripes),
+    var(--rainbow);
+  backdrop-filter: blur(10px); /* Blur effect */
+  -webkit-backdrop-filter: blur(10px); /* For Safari */
+  z-index: -10;
+  position: relative; /* Ensure proper layering for pseudo-element */
+  overflow: hidden; /* Clip any overflowing animation */
+}
+
+.home_inner_wrapper{
+  z-index: -10;
+}
+
 .hero_head {
   color: var(--text-color-primary);
   font-size: 48px;
   font-weight: 700;
   font-family: var(--ff);
   line-height: 52px;
-  margin: 0px;
-}
-
-.hero_wrapper {
-  height: 90vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: var(--primary-color);
-  margin-top: 72px;
+  margin: 0;
 }
 
 .hero_passage {
@@ -35,56 +72,43 @@
 .left-box {
   padding-right: 24px;
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
   align-items: center;
-  z-index: 10;
+  z-index:10;
 }
 
 .right-box {
   padding-left: 10px;
   display: flex;
-  justify-content: start;
+  justify-content: flex-start;
   align-items: center;
-  z-index: 10;
+  z-index:10;
+
 }
 
-.pyramid_obj{
+/* Animation */
+.hero_wrapper::before {
+  content: "";
   position: absolute;
-  top: 160px;
-  left: -400px;
-  z-index: 1;
+  inset: 0;
+  background-image: 
+    var(--stripes),
+    var(--rainbow);
+  background-size: 200%, 100%;
+  animation: jumbo 60s linear infinite;
+  background-attachment: fixed;
+  mix-blend-mode: difference;
 }
 
-.pyramid_obj_2{
-  position: absolute;
-  top: 430px;
-  left: -400px;
-  z-index: 1;
-}
-
-/* responsive design*/
-
+/* Responsive Design */
 @media only screen and (max-width: 600px) {
-  .left-box {
-    margin-bottom: 24px;
-  }
   .left-box,
   .right-box {
-    padding-left: 10px;
-    display: flex;
+    padding: 0 10px;
     justify-content: center;
-    align-items: center;
   }
 
   .hero_wrapper {
     height: 110vh;
-  }
-
-  .pyramid_obj{
-    display: none;
-  }
-  
-  .pyramid_obj_2{
-    display: none;
   }
 }

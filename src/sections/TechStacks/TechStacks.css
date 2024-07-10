@@ -1,17 +1,40 @@
+.abstract_shape {
+    position: absolute;
+    top: 40%;
+    left: 70%;
+    /* opacity: 0.1; */
+    width: 400px;
+    height: 400px;
+    z-index: -1; /* Ensure it stays in the background */
+}
+
+.tech_stacks_container {
+    position: relative; /* Ensure the container is positioned for the SVG */
+    background-color: var(--secondary-color);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: -2;
+}
+
+/* Other existing styles... */
+
+
 .tech_stacks_container{
     background-color: var(--secondary-color);
-    height: 50vh;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .tech_stacks_head{
-    color: var(--text-color-white);
+    color: white;
     font-family: var(--ff);
     font-size: 14px;
-    font-weight: 500;
-    margin-left: 110px;
+    font-weight: 700;
+    margin-left: 100px;
     margin-bottom: 18px;
 }
 

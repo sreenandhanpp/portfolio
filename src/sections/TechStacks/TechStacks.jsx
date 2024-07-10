@@ -1,6 +1,7 @@
 import React from 'react';
 import './TechStacks.css';
 import TechStackCard from '../../components/TechStackCard/TechStackCard';
+// import abstractShape from './abstract/19.svg';
 
 const techStacks = [
   { name: 'HTML', icon: './techstacks/reactjs.svg' },
@@ -15,10 +16,10 @@ const techStacks = [
   { name: 'Vite', icon: './techstacks/vite.svg' },
 ];
 
-
 const TechStacks = () => {
   return (
-    <div className='tech_stacks_container'>
+    <section className='tech_stacks_container section'>
+      <img src={'./abstract/19.svg'} alt="Abstract Shape" className="abstract_shape" />
       <div className="container">
         <div className="row">
           <div className="col-md-12 d-flex justify-content-start align-items-center">
@@ -33,7 +34,7 @@ const TechStacks = () => {
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

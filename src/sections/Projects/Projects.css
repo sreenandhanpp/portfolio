@@ -1,5 +1,5 @@
 .projects_container{
-    background-color: #000;
+    background-color: white;
     height: auto;
     display: flex;
     justify-content: center;
@@ -8,16 +8,16 @@
 }
 
 .projects_header{
-    color: var(--text-color-white);
+    color: var(--text-color-primary);
     font-family: var(--ff);
     font-size: 18px;
     font-weight: 700;
-    margin-bottom: 0px;
+    margin-bottom: 14px;
 }
 
 @media only screen and (max-width: 600px) {
-    .projects_container{
-        height: auto;
+    .projects_container{    
+        height:auto;    
         padding: 64px 0px 64px 0px;
     }
 }
